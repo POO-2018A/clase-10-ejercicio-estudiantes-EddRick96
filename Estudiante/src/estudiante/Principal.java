@@ -32,6 +32,8 @@ public class Principal {
         String[] me5 = {"m3","m5"};
         estudiantes[4].setMaterias(me5);
         
+        int m1 = 0, m2 = 0, m3 = 0, m4 = 0, m5 = 0;//contadores para cada materia
+        
         System.out.println("\t\tINFORMACIÓN ESTUDIANTES\n\n");
         for(int j = 0; j<estudiantes.length;j++){
             System.out.println("\tEstudiante "+(j+1));
@@ -40,19 +42,45 @@ public class Principal {
             String[] materiasEstudiante = estudiantes[j].getMaterias();
             for(int i = 0; i < materiasEstudiante.length; i++){
                 System.out.println(i+1+". "+materiasEstudiante[i]);
+                switch(materiasEstudiante[i]){
+                   case "m1":
+                        m1++;
+                        break;
+                    //System.out.println("m1: "+m1);
+                    case "m2":
+                        m2++;
+                        break;
+                    //System.out.println("m2: "+m2);
+                    case "m3":
+                        m3++;
+                        break;
+                    //System.out.println("m1: "+m3);
+                    case "m4":
+                       m4++;
+                        break;
+                    //System.out.println("m4: "+m4);
+                    case "m5":
+                        m5++;
+                    //System.out.println("m5: "+m5);
+                        break;
+               }
             }
         }
         System.out.println("\t\t\tRESUMEN");
         System.out.println("Número de estudiantes por materia");
-        int m1 = 0, m2 = 0, m3 = 0, m4 = 0, m5 = 0;//contadores para cada materia
-         for(int j = 0; j<estudiantes.length;j++){
+            System.out.println("m1: "+m1);
+            System.out.println("m2: "+m2);
+            System.out.println("m3: "+m3);
+            System.out.println("m4: "+m4);
+            System.out.println("m5: "+m5); 
+         /*for(int j = 0; j<estudiantes.length;j++){
             String[] materiasEstudiante = estudiantes[j].getMaterias();
             for(int i = 0; i < materiasEstudiante.length; i++){
                 //System.out.println(i+1+". "+materiasEstudiante[i]);
-                /*if(materiasEstudiante[i]=="m1"){
-                    m1=m1+1;
-                    System.out.println("m1: "+m1);
-                }*/
+//                if(materiasEstudiante[i]=="m1"){
+//                    m1=m1+1;
+//                    System.out.println("m1: "+m1);
+//                }
                switch(materiasEstudiante[i]){
                    case "m1":
                         m1++;
@@ -77,11 +105,6 @@ public class Principal {
                }
             }
             
-        }
-            System.out.println("m1: "+m1);
-            System.out.println("m2: "+m2);
-            System.out.println("m3: "+m3);
-            System.out.println("m4: "+m4);
-            System.out.println("m5: "+m5); 
+        }*/
     }
 }
